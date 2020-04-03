@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.IO;
 using System.ComponentModel;
 using System.Threading;
+using System.Reflection;
 
 
 namespace Mp3_opt
@@ -27,6 +28,7 @@ namespace Mp3_opt
         public MainWindow()
         {
             InitializeComponent();
+            labelAssembly.Content = "version: " + Convert.ToString(Assembly.GetExecutingAssembly().GetName().Version);
         }
 
         private void dfs(string rootDir, in Stack<string> treeDirs)
@@ -137,7 +139,7 @@ namespace Mp3_opt
                             if (fileMp3.Tag.Title != null && fileMp3.Tag.FirstAlbumArtist != null)
                             {
                                 string path;
-                                string[] keywords = { "noscreamo", "female", "metalcore", "piano" };
+                                string[] keywords = { "noscreamo", "female", "metalcore", "piano", "djent", "djentrus", "femalerus" };
                                 // получаю путь без имени файла
                                 path = fi.FullName;
                                 path = path.Remove(fi.FullName.IndexOf(fi.Name));
@@ -157,7 +159,6 @@ namespace Mp3_opt
                                 path += ".mp3";
                                 //переименновывание файла
                                 fi.MoveTo(path);
-                                TextBoxGenres.AppendText(path + "\n");
                             }
                         }
                         /* действие второе. Изменение картинок

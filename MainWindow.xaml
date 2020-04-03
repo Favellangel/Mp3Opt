@@ -15,7 +15,7 @@
             <ColumnDefinition Width="80*"/>
         </Grid.ColumnDefinitions>
         <Label Content="Введите путь&#xA;" HorizontalAlignment="Left" Margin="17,14,0,0" VerticalAlignment="Top" Width="86" Height="27" Foreground="White"/>
-        <TextBox Name="TextBoxInPath" HorizontalAlignment="Left" Height="23" Margin="108,18,0,0" TextWrapping="Wrap" Text="C:\\folder" VerticalAlignment="Top" Width="201" Background="Black" Foreground="White" Grid.ColumnSpan="2" BorderBrush="Transparent"/>
+        <TextBox Name="TextBoxInPath" Height="23" Margin="108,18,37,0" TextWrapping="Wrap" Text="C:\\folder" VerticalAlignment="Top" Background="Black" Foreground="White" Grid.ColumnSpan="2" BorderBrush="Transparent"/>
         <TabControl HorizontalAlignment="Left" Height="255" Margin="17,57,0,0" VerticalAlignment="Top" Width="292" Grid.ColumnSpan="2" BorderBrush="#00000000" Background="Black" Foreground="Transparent">
             <TabItem Header="редактирование" BorderBrush="Transparent" Foreground="Black">
                 <TabItem.Background>
@@ -49,12 +49,13 @@
                     <TextBox Name="TextBoxOutPath" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="0,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="249" Grid.ColumnSpan="3" BorderBrush="Transparent" Foreground="White" Background="Black"/>
                     <TextBox Name="TextBoxGenres" Grid.Column="2" Height="111" Margin="0,59,91,0" TextWrapping="Wrap" VerticalAlignment="Top" AcceptsReturn="True" Grid.ColumnSpan="3" BorderBrush="Transparent" Foreground="White" Background="Black" />
                     <Label Content="Введите вершину&#xA;" HorizontalAlignment="Left" Margin="0,2,0,0" VerticalAlignment="Top" Width="106" Height="25" Grid.Column="2" Background="Transparent" Foreground="White" Grid.ColumnSpan="2"/>
-                    <TextBox x:Name="TextBoxTop" HorizontalAlignment="Left" Height="23" Margin="95,4,0,0" TextWrapping="Wrap" Text="Music" VerticalAlignment="Top" Width="120" Grid.Column="3" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.478" BorderBrush="Transparent" Foreground="White" Background="Black"/>
+                    <TextBox x:Name="TextBoxTop" HorizontalAlignment="Left" Height="23" Margin="103,6,0,0" TextWrapping="Wrap" Text="Music" VerticalAlignment="Top" Width="120" Grid.Column="3" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.478" BorderBrush="Transparent" Foreground="White" Background="Black"/>
                 </Grid>
             </TabItem>
         </TabControl>
         <Button Content="Применить" HorizontalAlignment="Left" Margin="216,324,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Grid.ColumnSpan="2" Grid.Column="1" BorderBrush="White" Foreground="White" Background="Black" Height="33"/>
         <ProgressBar Minimum="0" Name="PgsBar" HorizontalAlignment="Left" Height="26" Margin="17,331,0,0" VerticalAlignment="Top" Value="0" Width="292" Grid.ColumnSpan="2" Background="Black" BorderBrush="Transparent"/>
+        <Label x:Name="labelAssembly" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="194,15,0,0" VerticalAlignment="Top" Width="97" Grid.ColumnSpan="2" Foreground="White"/>
 
     </Grid>
 </Window>
